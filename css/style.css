@@ -220,6 +220,10 @@ div#myBar::after {
         font-size: 4px;
         line-height: 10px;
     }
+    .diffPhases:nth-child(3) h5 {
+        padding-left: 2px;
+    }
+    
     #phaseName {
         font-size: 20px;
         line-height: 26px;
