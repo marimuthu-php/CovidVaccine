@@ -5,6 +5,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-fullscreen-select.css">
 </head>
 <body>
     <div id="overall-wrapper" >
@@ -13,6 +14,7 @@
             <div id="left-content">
                 <h1 id="lihead">Candidate</h1>
                 <ul id="can-li"></ul>
+                <select id="mobselect"></select>
             </div>
 
             <div id="tab-content">
@@ -60,7 +62,9 @@
                     </div>
                 </div>
                 <div id="myProgress">
-                    <div id="myBar"></div>
+                    <div id="myBar"><span id="arrow1"> &#9650; </span>
+                    <span id="arrow2"> &#9650; </span></div>
+                    
                 </div>
                 <div id="phases">
                     <div id="leftphase">
@@ -77,5 +81,6 @@
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/bootstrap-fullscreen-select.js"></script>
 <script src="js/script.js"></script>
 </html>
