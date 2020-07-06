@@ -37,7 +37,17 @@
     height: 500px;
     overflow: hidden; 
     overflow-y: scroll;
+    display: block;
 } 
+#mobselect {
+    display: none;
+}
+.mobileSelect-container.white .list-container .mobileSelect-control, button.btn-mobileSelect-gen span.text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+}
 #can-li li {
     font-family: 'Rubik', sans-serif;
     font-size: 14px;
@@ -73,6 +83,9 @@
 }
 #sub-tab div {
     width: 33.33%;
+    padding-right: 6%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 #sub-tab {
     margin: 15px 0;
@@ -105,7 +118,7 @@
     justify-content: space-between;
 }
 #trial .diffPhases img {
-    width: 170px;
+    width: 90%;
     height: auto;
 }
 .diffPhases h5 {
@@ -119,6 +132,7 @@
 #myProgress {
     width: 100%;
     background-color: #ddd;
+    position: relative;
 }
   
 #myBar {
@@ -128,27 +142,49 @@
     background-color: #e70037;
     position: relative;
 }
-div#myBar::after {
+/* div#myBar::after {
     position: absolute;
     content: '\25B2';
     bottom: -8px;
     right: 2px;
     width: 5px;
     height: 5px;
-    /* background: #000; */
+    background: #000;
+} */
+#arrow1 {
+    position: absolute;
+    display: inline;
+    /* content: '\25B2'; */
+    bottom: -8px;
+    right: 0.5%;
+    width: 5px;
+    height: 5px;
+    color: #000;
+}
+#arrow2 {
+    position: absolute;
+    display: inline;
+    /* content: '\25B2'; */
+    bottom: -8px;
+    right: 21.5%;
+    width: 5px;
+    height: 5px;
+    color: #000;
 }
 #phases {
     margin-top: 20px;
 }
 #leftphase {
     width: 30%;
+    padding-right: 5%;
+    box-sizing: border-box;
 }
 #rightphase {
     width: 70%;
 }
 #phaseName {
     font-family: 'Rubik', sans-serif;
-    font-size: 52px;
+    font-size: 50px;
     line-height: 60px;
     font-weight: 400;
     color: #000000;
@@ -169,12 +205,16 @@ div#myBar::after {
     #overall-wrapper {
         padding: 10px 3%;
     }
+    #main-wrapper {
+        flex-direction: column;
+    }
     #left-content {
-        width: 25%;
-        padding-right: 5px;
+        width: 100%;
+        padding-right: 0;
     }
     #tab-content {
-        width: 75%;
+        width: 100%;
+        margin-top: 10px;
     }
     #main-head {
         font-size: 15px;
@@ -183,15 +223,20 @@ div#myBar::after {
     #lihead {
         font-size: 13px;
         line-height: 15px;
+        margin-bottom: 10px;
     }
     #can-li {
         margin-top: 5px;
         padding-right: 5px;
+        display: none;
     }
     #can-li li {
         font-size: 10px;
         line-height: 15px;
     }
+    #mobselect {
+        display: block;
+    } 
     #name {
         font-size: 16px;
         line-height: 20px;
@@ -203,26 +248,27 @@ div#myBar::after {
     #sub-tab div {
         width: 100%;
         margin-bottom: 5px;
+        padding: 0;
     }
     
     #sub-tab div h2, #trialphase {
-        font-size: 11px;
-        line-height: 12px;
+        font-size: 14px;
+        line-height: 16px;
         margin: 0 0 5px 0;
     }    
     #country {
-        font-size: 12px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
     }
     #sponsor, #funding, #phase1liner {
-        font-size: 10px;
-        line-height: 13px;
+        font-size: 12px;
+        line-height: 14px;
     }
-    #trial .diffPhases img {
+    /* #trial .diffPhases img {
         width: 42px;
-    }
+    } */
     .diffPhases h5 {
-        font-size: 4px;
+        font-size: 5px;
         line-height: 10px;
     }
     .diffPhases:nth-child(3) h5 {
@@ -231,13 +277,64 @@ div#myBar::after {
     #phaseName {
         font-size: 20px;
         line-height: 26px;
+        margin: 5px 0;
     }
     #phaseDesc1, #phaseDesc2 {
-        font-size: 10px;
-        line-height: 13px;
+        font-size: 12px;
+        line-height: 16px;
     }
     #myBar {
         margin-top: 6px;
         height: 8px;
+    }
+    #phases {
+        flex-direction: column;
+    }
+    #leftphase, #rightphase {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+/*Tab view*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #overall-wrapper {
+        padding: 10px 3%;
+    }
+    #main-head {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    #lihead {
+        font-size: 18px;
+    }
+    #can-li {
+        display: block;
+    } 
+    #mobselect, button.btn-mobileSelect-gen {
+        display: none;
+    }
+    #name {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    #sub-tab div h2, #trialphase {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #country {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #sponsor, #funding, #phase1liner {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .diffPhases h5 {
+        font-size: 7px;
+    }
+    #phaseName {
+        font-size: 40px;
+        line-height: 50px;
     }
 }
