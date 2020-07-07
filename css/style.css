@@ -73,6 +73,7 @@
     line-height: 23px;
     font-weight: 400;
     color: #717171; 
+    list-style: none;
 }
 #can-li li.active, #vac-li li.active {
     color: #b9004d;
@@ -216,6 +217,17 @@
 }
 #phaseDesc1 span, #phaseDesc2 span {
     font-weight: 700;
+}
+
+.myCircles:hover{
+    cursor: pointer;
+    fill: #fff;
+    stroke: black;
+}
+
+#vac-li li:hover{
+    cursor: pointer;
+    color: #b9004d;
 }
 
 @media screen and (max-width: 767px) {
