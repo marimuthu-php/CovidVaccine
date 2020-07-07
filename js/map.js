@@ -162,7 +162,7 @@ function mapfunction(selector){
             .attr("r", 0)
             .attr("class", "myCircles")
             .attr("fill-opacity", "70%")
-            .attr("r", 5)
+            .attr("r", 8)
             .attr("fill", "red")
             .attr("stroke", "#000000")
             .on('mouseover', tool_tip.show)
