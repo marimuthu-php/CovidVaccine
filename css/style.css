@@ -5,6 +5,12 @@
     display: flex;
     margin-top: 15px;
 }
+#map-wrapper {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
 ::-webkit-scrollbar {
     width: 6px;
     border-radius: 15px;
@@ -20,7 +26,7 @@
     line-height: 40px;
     font-weight: 700;
     color: #000000;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 #lihead {
     font-family: 'Rubik', sans-serif;
@@ -58,9 +64,12 @@
     padding: 3px 0;
     margin: 0;
 }
+#vac-li {
+    padding: 0 0 0 16px;
+}
 #vac-li li {
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 23px;
     font-weight: 400;
     color: #717171; 
@@ -113,7 +122,7 @@
     color: #000000;
     margin: 0;
 }
-#sponsor, #funding, #phase1liner {
+#sponsor, #funding, #phase1liner, #intro-line {
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     line-height: 20px;
@@ -238,8 +247,8 @@
         display: none;
     }
     #can-li li, #vac-li li {
-        font-size: 10px;
-        line-height: 15px;
+        font-size: 14px;
+        line-height: 18px;
     }
     #mobselect {
         display: block;
@@ -249,12 +258,12 @@
         line-height: 20px;
     }
     #sub-tab {
-        margin: 10px 0;
+        margin: 10px 0 0 0;
         flex-direction: column;
     }
     #sub-tab div {
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         padding: 0;
     }
     
@@ -267,7 +276,7 @@
         font-size: 16px;
         line-height: 20px;
     }
-    #sponsor, #funding, #phase1liner {
+    #sponsor, #funding, #phase1liner, #intro-line {
         font-size: 12px;
         line-height: 14px;
     }
@@ -348,7 +357,7 @@
         font-size: 15px;
         line-height: 20px;
     }
-    #sponsor, #funding, #phase1liner {
+    #sponsor, #funding, #phase1liner, #intro-line {
         font-size: 14px;
         line-height: 18px;
     }
