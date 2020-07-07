@@ -51,7 +51,7 @@ $(document).ready(function(){
             $("#phaseDesc2").empty();
             $("#phase1liner").empty();
             $("#phaseDesc1").text("Deciding whether a drug is ready for clinical trials (the so-called move from bench to bedside) involves extensive preclinical studies that yield preliminary efficacy, toxicity, pharmacokinetic and safety information.")
-            move(48.5);
+            move(15);
             $("#arrow2").css("color","#fff");
         } else if( trialphase[id] == "Pre-clinical") {
             $("#phaseName").text(trialphase[id]);
@@ -123,7 +123,7 @@ $(document).ready(function(){
                 $("#phaseDesc2").empty();
                 $("#phase1liner").empty();
                 $("#phaseDesc1").text("Deciding whether a drug is ready for clinical trials (the so-called move from bench to bedside) involves extensive preclinical studies that yield preliminary efficacy, toxicity, pharmacokinetic and safety information.")
-                move(48.5);
+                move(15);
                 $("#arrow2").css("color","#fff");
             } else if( trialphase[id] == "Pre-clinical") {
                 $("#phaseName").text(trialphase[id]);

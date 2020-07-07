@@ -134,6 +134,7 @@ function mapfunction(selector){
                             console.log(t.Sponsor);
                             return t.Candidate;
                         })
+                    
 
                         $("#vac-li li").click(function(){
                             $(".active").removeClass("active")
@@ -159,7 +160,7 @@ function mapfunction(selector){
                                 $("#phaseDesc2").empty();
                                 $("#phase1liner").empty();
                                 $("#phaseDesc1").text("Deciding whether a drug is ready for clinical trials (the so-called move from bench to bedside) involves extensive preclinical studies that yield preliminary efficacy, toxicity, pharmacokinetic and safety information.")
-                                move(48.5);
+                                move(15);
                                 $("#arrow2").css("color","#fff");
                             } else if( trialphase1[ai] == "Phase 1" ) {
                                 $("#phaseName").text(trialphase1[ai]);
@@ -206,6 +207,8 @@ function mapfunction(selector){
                             }
 
                         })
+
+                        $("#vac-li li:first-child").click();
 
                         function move(width) {
                             var elem = document.getElementById("myBar");
