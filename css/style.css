@@ -221,6 +221,10 @@
     #overall-wrapper {
         padding: 10px 3%;
     }
+    #map-wrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
     #main-wrapper {
         flex-direction: column;
     }
