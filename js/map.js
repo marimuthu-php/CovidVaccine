@@ -19,6 +19,49 @@ $.ajax ({
     }
 });
 
+function showlist(){
+    var selectedValue = $(".countrylist").val();
+    // console.log(selectedValue);
+
+    var fd = alldata.filter(function(objcont){
+        return objcont["Country/ies"] === selectedValue;
+    }) 
+
+    var list = d3.select('.vaccines')
+    d3.select('.vaccines').html(null)
+    list.selectAll('.vaccinename')
+        .data(fd).enter()
+        .append("li")
+        .attr("class","li-item")
+        .html(function(t){
+            console.log(t.Sponsor);
+            return t.Candidate;
+        })
+    
+}
+
+
+function createDropdown(statenames){
+
+    var fArr = statenames.filter(function(e) { return e !== 'xx' })
+
+    var list = d3.select(".countrylist")
+
+    list.selectAll('.countryname')
+        .data(fArr).enter()
+        .append("option")
+        .attr("class","countryname")
+        .attr("value",function(t){
+            return t;
+        })
+        .html(function(t){
+            return t;
+        })
+
+
+
+}
+
 function mapfunction(selector){
 
     var margin = {top: 0, left: 0, right: 0, bottom: 0},
@@ -75,11 +118,17 @@ function mapfunction(selector){
        
 
         var uniquestates = [];
+
         for(i = 0; i< alldata.length; i++){  
             if(uniquestates.indexOf(alldata[i]["Country/ies"]) === -1){
                 uniquestates.push(alldata[i]["Country/ies"]);        
             }        
         }
+
+        console.log("uniquestates", uniquestates);
+
+        createDropdown(uniquestates)
+        
 
 
         
