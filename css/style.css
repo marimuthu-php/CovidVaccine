@@ -253,7 +253,7 @@
 
 .countrylist{
     width: 100%;
-/*     margin: 15px 0; */
+    margin: 15px 0;
     display: none;
 }
 @media screen and (min-width:1024px) {
