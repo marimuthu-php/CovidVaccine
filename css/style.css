@@ -204,6 +204,7 @@
     line-height: 60px;
     font-weight: 400;
     color: #000000;
+    margin: 0;
 }
 #phaseDesc1, #phaseDesc2 {
     font-family: 'Rubik', sans-serif;
