@@ -12,7 +12,10 @@
         <h1 id="main-head">THE GREAT RACE TO A COVID VACCINE</h1>
         <p id="intro-line">This is The Federal's interactive on the COVID vaccine scenario. Multiple research organisations in various countries are engaged in finding a vaccine for COVID-19. This interactive shows the phase/stage where each research stands. One can simply click on the vaccine name list on the left-hand side to get comprehensive details. Also, hover the cursor over the map to see the progress of vaccine development across countries.</p>
         <div id="map-wrapper">
-            <div class="map" id="world"></div>
+            <div class="map" >
+                <select class="countrylist" onchange="showlist()"></select>
+                <div id="world"></div>
+            </div>
             <div class="map-content">
                 <p>Candidate (select one)</p>
                 <ul class="vaccines" id="vac-li"></ul>
@@ -106,5 +109,9 @@
         $("#vac-li li").click(function(){
             console.log(0)
         });
+        // $("#countrylist").on("change", function(){
+        //     console.log("test");
+            
+        // })
     </script>
 </html>
