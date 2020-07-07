@@ -22,7 +22,7 @@ $.ajax ({
 function mapfunction(selector){
 
     var margin = {top: 0, left: 0, right: 0, bottom: 0},
-    scale = 100, center = [0, 40],
+    scale = 120, center = [0, 43.5],
     height = 500 - margin.top - margin.bottom,
     width = 800 - margin.left - margin.right;
     mapurl = "world-india.json"
