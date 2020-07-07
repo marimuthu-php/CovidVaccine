@@ -70,8 +70,9 @@
 }
 #vac-li li {
     font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    line-height: 23px;
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 8px;
     font-weight: 400;
     color: #717171; 
 }
