@@ -28,14 +28,14 @@
     color: #000000;
     margin: 0 0 10px 0;
 }
-#lihead {
+/* #lihead {
     font-family: 'Rubik', sans-serif;
     font-size: 21px;
     line-height: 25px;
     font-weight: 700;
     color: #000000;
     margin: 0;
-}
+} */
 #can-li {
     list-style: none;
     padding-left: 0;
@@ -107,7 +107,7 @@
 #sub-tab {
     margin: 15px 0;
 }
-#sub-tab div h2, #trialphase {
+#sub-tab div h2, #trialphase, #lihead {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     line-height: 25px;
@@ -254,8 +254,8 @@
         line-height: 28px;
     }
     #lihead {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: 14px;
+        line-height: 16px;
         margin-top: 10px;
     }
     #can-li {
@@ -353,9 +353,9 @@
         font-size: 25px;
         line-height: 30px;
     }
-    #lihead {
+    /* #lihead {
         font-size: 18px;
-    }
+    } */
     #can-li {
         display: block;
     } 
@@ -366,7 +366,7 @@
         font-size: 30px;
         line-height: 40px;
     }
-    #sub-tab div h2, #trialphase {
+    #sub-tab div h2, #trialphase, #lihead {
         font-size: 16px;
         line-height: 20px;
     }

@@ -24,17 +24,16 @@ $(document).ready(function(){
         $("#can-li").append('<li class="li-item" id="'+ i +'-Element">'+ res[i] +'</li>');
         $("#mobselect").append('<option class="li-item" value="'+ res[i] +'" id="'+ i + '">' + res[i] +'</option>')
     }
-    
-    $("#can-li li:first-child").addClass("active");
-    $("#tab-content #name").text(res[0]);
-    $("#tab-content #country").text(country[0]);
-    $("#tab-content #funding").text(funding[0]);
-    $("#tab-content #sponsor").text(sponsor[0]);
-    $("#phaseName").text(trialphase[0]);
-    $("#phase1liner").text("Accelerated by combining 2 and 3");
-    $("#phaseDesc1").html("<span>Phase 2: </span>Phase II trials are performed on larger groups of patients and are designed to assess the efficacy of the drug and to continue the Phase I safety assessments. Most importantly, Phase II clinical studies help to establish therapeutic doses for the large-scale Phase III studies.");
-    $("#phaseDesc2").html("<span>Phase 3: </span>Phase III trials are randomized controlled multicentre trials and provide most of the long-term safety data. Phase III trials investigate the efficacy and safety of a new drug over 6 to 12 months or longer in a large patient population (several hundred patients or more) under conditions that reflect daily clinical life much more closely than the Phase I or II trials and allow evaluation of the overall benefit-risk relationship of the drug.")
-    $("div#myBar:before").css("display","block")
+    $('#can-li').scrollTop(650);
+    $("#can-li li:nth-child(35)").addClass("active");
+    $("#tab-content #name").text(res[34]);
+    $("#tab-content #country").text(country[34]);
+    $("#tab-content #funding").text(funding[34]);
+    $("#tab-content #sponsor").text(sponsor[34]);
+    $("#phaseName").text(trialphase[34]);
+    $("#phase1liner").empty();
+    $("#phaseDesc1").text("Phase 0 involves exploratory, first-in-human (FIH) trials that are run according to FDA guidelines. Also called human microdose studies, they have single sub-therapeutic doses given to 10 to 15 subjects and yield pharmacokinetic data or help with imaging specific targets without introducing pharmacological effects. Pharmaceutical companies perform Phase 0 studies to decide which of their drug candidates has the best pharmacokinetic parameters in humans.");
+    $("#phaseDesc2").empty()
 
     $(".li-item").click(function() {
         var id = this.id.split(/\s*\-\s*/g);
