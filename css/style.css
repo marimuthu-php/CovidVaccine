@@ -221,6 +221,11 @@
     stroke: black;
 }
 
+#can-li li:hover{
+    cursor: pointer;
+    color: #b9004d;
+}
+
 #vac-li li:hover{
     cursor: pointer;
     color: #b9004d;
