@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var res = [], country= [], sponsor = [], funding = [], trialphase = [], sample = [];
+    var res = [], country= [], sponsor = [], funding = [], trialphase = [], allData = [];
     $.ajax ({
         'async': false,
         'global': false,
@@ -13,10 +13,13 @@ $(document).ready(function(){
                 sponsor.push(key["Sponsor"])
                 funding.push(key["Funding"]);
                 trialphase.push(key["Trial Phase"]);
-                // console.log(trialphase)
             });
+            
         }
     });
+
+    console.log(allData)
+
     for(var i =0; i< res.length ; i++) {
         $("#can-li").append('<li class="li-item" id="'+ i +'-Element">'+ res[i] +'</li>');
         $("#mobselect").append('<option class="li-item" value="'+ res[i] +'" id="'+ i + '">' + res[i] +'</option>')
@@ -43,7 +46,14 @@ $(document).ready(function(){
         $("#tab-content #sponsor").text(sponsor[id]);
             
         console.log(trialphase[id])
-        if( trialphase[id] == "Pre-clinical") {
+        if( trialphase[id] == "Early research" ) {
+            $("#phaseName").text(trialphase[id]);
+            $("#phaseDesc2").empty();
+            $("#phase1liner").empty();
+            $("#phaseDesc1").text("Deciding whether a drug is ready for clinical trials (the so-called move from bench to bedside) involves extensive preclinical studies that yield preliminary efficacy, toxicity, pharmacokinetic and safety information.")
+            move(48.5);
+            $("#arrow2").css("color","#fff");
+        } else if( trialphase[id] == "Pre-clinical") {
             $("#phaseName").text(trialphase[id]);
             $("#phaseDesc1").text("Phase 0 involves exploratory, first-in-human (FIH) trials that are run according to FDA guidelines. Also called human microdose studies, they have single sub-therapeutic doses given to 10 to 15 subjects and yield pharmacokinetic data or help with imaging specific targets without introducing pharmacological effects. Pharmaceutical companies perform Phase 0 studies to decide which of their drug candidates has the best pharmacokinetic parameters in humans.");
             $("#phaseDesc2").empty();
@@ -108,7 +118,14 @@ $(document).ready(function(){
             $("#tab-content #country").text(country[id]);
             $("#tab-content #funding").text(funding[id]);
             $("#tab-content #sponsor").text(sponsor[id]);
-            if( trialphase[id] == "Pre-clinical") {
+            if( trialphase[id] == "Early research" ) {
+                $("#phaseName").text(trialphase[id]);
+                $("#phaseDesc2").empty();
+                $("#phase1liner").empty();
+                $("#phaseDesc1").text("Deciding whether a drug is ready for clinical trials (the so-called move from bench to bedside) involves extensive preclinical studies that yield preliminary efficacy, toxicity, pharmacokinetic and safety information.")
+                move(48.5);
+                $("#arrow2").css("color","#fff");
+            } else if( trialphase[id] == "Pre-clinical") {
                 $("#phaseName").text(trialphase[id]);
                 $("#phaseDesc1").text("Phase 0 involves exploratory, first-in-human (FIH) trials that are run according to FDA guidelines. Also called human microdose studies, they have single sub-therapeutic doses given to 10 to 15 subjects and yield pharmacokinetic data or help with imaging specific targets without introducing pharmacological effects. Pharmaceutical companies perform Phase 0 studies to decide which of their drug candidates has the best pharmacokinetic parameters in humans.");
                 $("#phaseDesc2").empty();
