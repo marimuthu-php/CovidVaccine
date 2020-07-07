@@ -5,12 +5,7 @@
     display: flex;
     margin-top: 15px;
 }
-#map-wrapper {
-    display: flex;
-    margin-top: 15px;
-    justify-content: center;
-    align-items: center;
-}
+
 ::-webkit-scrollbar {
     width: 6px;
     border-radius: 15px;
@@ -65,7 +60,8 @@
     margin: 0;
 }
 #vac-li {
-    padding: 0 0 0 16px;
+    padding: 0 0 0 0;
+    list-style: none;
 }
 #vac-li li {
     font-family: 'Rubik', sans-serif;
@@ -228,6 +224,32 @@
 #vac-li li:hover{
     cursor: pointer;
     color: #b9004d;
+}
+
+.map{
+    width: 60%;
+}
+.map-content{
+    width: 40%;
+}
+
+.map-content p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #e70037;
+    margin: 0 0 10px 0;
+}
+@media screen and (min-width:1024px) {
+
+    #map-wrapper {
+        display: flex;
+        margin-top: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
