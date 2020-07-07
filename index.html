@@ -10,11 +10,15 @@
 <body>
     <div id="overall-wrapper" >
         <h1 id="main-head">THE GREAT RACE TO A COVID VACCINE</h1>
+        <div class="map" id="world"></div>
+        <ul class="vaccines" id="vac-li">
+            
+        </ul>
         <div id="main-wrapper">
             <div id="left-content">
+                <select id="mobselect"></select>
                 <h1 id="lihead">Candidate</h1>
                 <ul id="can-li"></ul>
-                <select id="mobselect"></select>
             </div>
 
             <div id="tab-content">
@@ -82,5 +86,20 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/bootstrap-fullscreen-select.js"></script>
-<script src="js/script.js"></script>
+<script src="https://thefederal.com/embed/common-js/d3.v4.min.js"></script>
+	<script src="https://thefederal.com/embed/corona-dashboard-master/js/d3-tip.js"></script>
+	<script src="https://d3js.org/topojson.v2.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://thefederal.com/embed/common-js/underscore-min.js"></script>
+    <script src="js/import.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        mapfunction("#world")
+    </script>
+    <script>
+        $("#vac-li li").click(function(){
+            console.log(0)
+        });
+    </script>
 </html>
