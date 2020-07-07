@@ -241,6 +241,12 @@
     color: #e70037;
     margin: 0 0 10px 0;
 }
+
+.countrylist{
+    width: 100%;
+    margin: 15px 0;
+    display: none;
+}
 @media screen and (min-width:1024px) {
 
     #map-wrapper {
@@ -253,6 +259,9 @@
 }
 
 @media screen and (max-width: 767px) {
+    .countrylist{
+        display: block;
+    }
     #overall-wrapper {
         padding: 10px 3%;
     }
