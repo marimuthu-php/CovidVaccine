@@ -5,7 +5,12 @@
     display: flex;
     margin-top: 15px;
 }
-
+#map-wrapper {	
+    display: flex;	
+    margin-top: 15px;	
+    justify-content: center;	
+    align-items: center;	
+}
 ::-webkit-scrollbar {
     width: 6px;
     border-radius: 15px;
@@ -69,7 +74,6 @@
     line-height: 23px;
     font-weight: 400;
     color: #717171; 
-    list-style: none;
 }
 #can-li li.active, #vac-li li.active {
     color: #b9004d;
