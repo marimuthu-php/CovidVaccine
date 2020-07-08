@@ -141,7 +141,13 @@ function createDropdown(statenames){
             return t;
         })
 
-
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			 $('.countrylist').mobileSelect({				
+				 onClose: function(){
+					 showlist();
+				 }
+			 });
+		 }
 
 }
 
@@ -354,11 +360,5 @@ function mapfunction(selector){
     });
 
 }
-// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-//     $('.countrylist').mobileSelect({				
-//         onClose: function(){
-// //             createDropdown(uniquestates);
-//             showlist();
-//         }
-//     });
-// }
+
+
