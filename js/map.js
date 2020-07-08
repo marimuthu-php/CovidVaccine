@@ -355,9 +355,9 @@ function mapfunction(selector){
 
 }
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    $('#conid').mobileSelect({				
+    $('.countrylist').mobileSelect({				
         onClose: function(){
-            createDropdown(uniquestates);
+//             createDropdown(uniquestates);
             showlist();
         }
     });
