@@ -354,3 +354,11 @@ function mapfunction(selector){
     });
 
 }
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('#conid').mobileSelect({				
+        onClose: function(){
+            createDropdown(uniquestates);
+            showlist();
+        }
+    });
+}
